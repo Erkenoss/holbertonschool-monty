@@ -5,6 +5,7 @@ void get_func(stack_t **stack, char *instruct, unsigned int line_nbr)
     instruction_t exec[] = {
         {"push", push},
         {"pall", pall},
+        {"pint", pint},
         {NULL, NULL}
     };
     char *number;

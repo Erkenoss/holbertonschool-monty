@@ -4,9 +4,7 @@ void push(stack_t **list, unsigned int line_number)
 {
     stack_t *new_node = malloc(sizeof(stack_t));
     int number;
-    
-    (void) line_number;
- 
+
     if (new_node == NULL)
         {
             fprintf(stderr, "Error: malloc failed");
@@ -17,7 +15,7 @@ void push(stack_t **list, unsigned int line_number)
 
     if (!isdigit(global_token[0]))
         {
-            fprintf(stderr, "Error: invalid argument\n");
+            fprintf(stderr, "L%u: usage: push integer\n", line_number);
             exit(EXIT_FAILURE);
         }
 
