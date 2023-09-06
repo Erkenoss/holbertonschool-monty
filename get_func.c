@@ -8,6 +8,7 @@ void get_func(stack_t **stack, char *instruct, unsigned int line_nbr)
         {"pint", pint},
         {"pop", pop},
         {"add", add},
+        {"nop", nop},
         {NULL, NULL}
     };
     char *number;
