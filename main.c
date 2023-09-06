@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
     read = getline(&line, &len, file);
-    while (read != -1)
+    while ((read = getline(&line, &len, file)) != -1)
     {
 		if (read > 0 && line[read - 1] == '\n')
 		{
@@ -46,9 +46,6 @@ int main(int argc, char *argv[])
             get_func(&list, instruct, line_nbr);
             instruct = strtok(NULL, "\n");
         }
-        free(line);
-        line = NULL;
-        read = getline(&line, &len, file);
     }
     free(line);
     do_free(&list);
