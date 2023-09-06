@@ -25,7 +25,7 @@ void get_func(stack_t **stack, char *instruct, unsigned int line_number)
     int iteration = 0;
     char *token[100];
     int i = 0;
-    
+
     number = strtok(instruct, " \t");
     while(number != NULL)
     {
@@ -36,7 +36,7 @@ void get_func(stack_t **stack, char *instruct, unsigned int line_number)
     global_token = token[1];
 
     while (exec[iteration].opcode != NULL)
-    {        
+    {
         if (strcmp(exec[iteration].opcode, token[0]) == 0)
         {
             exec[iteration].f(stack, line_number);

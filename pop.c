@@ -23,6 +23,6 @@ void pop(stack_t **list, unsigned int line_number)
     *list = (*list)->next;
     if (*list != NULL)
         (*list)->prev = NULL;
-    
+
     free(temp_pop);
 }

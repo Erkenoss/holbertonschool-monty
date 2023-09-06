@@ -7,7 +7,7 @@ char *global_token = NULL;
 *
 * @argc: nbr of arguments gave by the user
 * @argv: arguments gave by the user
-* 
+*
 * Return: always 0
 */
 
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
         }
         free(line);
         line = NULL;
-        read = getline(&line, &len, file); 
+        read = getline(&line, &len, file);
     }
     free(line);
     do_free(&list);
