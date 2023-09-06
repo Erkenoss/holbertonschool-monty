@@ -1,6 +1,16 @@
 #include "monty.h"
 
-void get_func(stack_t **stack, char *instruct, unsigned int line_nbr)
+/**
+* get_func - check the instruction gave by monty file
+*
+* @list: actual stack
+* @line_number: actual line of monty instruction
+* @instruct: instruction take in the monty file
+*
+* Return: No return, void function
+*/
+
+void get_func(stack_t **stack, char *instruct, unsigned int line_number)
 {
     instruction_t exec[] = {
         {"push", push},
@@ -29,11 +39,11 @@ void get_func(stack_t **stack, char *instruct, unsigned int line_nbr)
     {        
         if (strcmp(exec[iteration].opcode, token[0]) == 0)
         {
-            exec[iteration].f(stack, line_nbr);
+            exec[iteration].f(stack, line_number);
             return;
         }
         iteration++;
     }
-    fprintf(stderr, "L%d: unknown instruction %s\n", line_nbr, token[0]);
+    fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token[0]);
     exit(EXIT_FAILURE);
 }

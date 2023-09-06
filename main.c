@@ -2,6 +2,15 @@
 
 char *global_token = NULL;
 
+/**
+* main - check the code, entry point
+*
+* @argc: nbr of arguments gave by the user
+* @argv: arguments gave by the user
+* 
+* Return: always 0
+*/
+
 int main(int argc, char *argv[])
 {
     FILE *file = NULL;
