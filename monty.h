@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
+
+extern char *global_token;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -14,6 +17,7 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
+
 typedef struct stack_s
 {
         int n;
@@ -29,14 +33,17 @@ typedef struct stack_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
+
 typedef struct instruction_s
 {
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void get_func(FILE *file);
-void push(stack_t **stack, unsigned int line_number, int argu);
-void pall(stack_t **stack, unsigned int line_number);
+void do_free(stack_t **stack);
+void get_func(stack_t **stack, char *instruct, unsigned int line_nbr);
+
+void push(stack_t **list, unsigned int line_nbr);
+void pall(stack_t **list, unsigned int line_nbr);
 
 #endif
