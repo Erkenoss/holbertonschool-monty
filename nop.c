@@ -2,5 +2,6 @@
 
 void nop(stack_t **list, unsigned int line_nbr)
 {
-    return;
+    (void) list;
+    (void) line_nbr;
 }
