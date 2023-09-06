@@ -45,5 +45,6 @@ void get_func(stack_t **stack, char *instruct, unsigned int line_nbr);
 
 void push(stack_t **list, unsigned int line_nbr);
 void pall(stack_t **list, unsigned int line_nbr);
+void pint(stack_t **list, unsigned int line_nbr);
 
 #endif
