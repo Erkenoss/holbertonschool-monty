@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
         exit(EXIT_FAILURE);
     }
-    read = getline(&line, &len, file);
     while ((read = getline(&line, &len, file)) != -1)
     {
 		if (read > 0 && line[read - 1] == '\n')
