@@ -25,6 +25,7 @@ void push(stack_t **list, unsigned int line_number)
     if (!isdigit(global_token[0]))
         {
             fprintf(stderr, "L%u: usage: push integer\n", line_number);
+            do_free(list);
             exit(EXIT_FAILURE);
         }
 

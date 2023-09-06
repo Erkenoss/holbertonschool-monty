@@ -45,5 +45,6 @@ void get_func(stack_t **stack, char *instruct, unsigned int line_number)
         iteration++;
     }
     fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token[0]);
+    do_free(stack);
     exit(EXIT_FAILURE);
 }
