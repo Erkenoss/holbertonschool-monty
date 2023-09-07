@@ -27,7 +27,7 @@ void get_func(stack_t **stack, char *instruct, unsigned int line_number)
 	int i = 0;
 
 	number = strtok(instruct, " \t");
-	while(number != NULL)
+	while (number != NULL)
 	{
 		token[i] = number;
 		i++;
