@@ -3,7 +3,7 @@
 /**
 * get_func - check the instruction gave by monty file
 *
-* @list: actual stack
+* @stack: actual stack
 * @line_number: actual line of monty instruction
 * @instruct: instruction take in the monty file
 *

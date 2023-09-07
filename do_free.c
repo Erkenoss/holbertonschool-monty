@@ -3,7 +3,7 @@
 /**
 * do_free - free all the stack
 *
-* @list: actual stack to free
+* @stack: actual stack to free
 *
 * Return: No return, void function
 */
