@@ -18,6 +18,7 @@ void get_func(stack_t **stack, char *instruct, unsigned int line_number)
 		{"pint", pint},
 		{"pop", pop},
 		{"add", add},
+		{"swap", swap},
 		{"nop", nop},
 		{NULL, NULL}
 	};
