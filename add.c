@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
-// * add - adds the top two elements of the stack
+* add - adds the top two elements of the stack
 *
 * @list: actual stack
 * @line_number: actual line of monty instruction
@@ -16,7 +16,6 @@ void add(stack_t **list, unsigned int line_number)
         fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
         exit(EXIT_FAILURE);
     }
-
     (*list)->next->n += (*list)->n;
     pop(list, line_number);
 }
