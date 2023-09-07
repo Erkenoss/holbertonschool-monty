@@ -20,14 +20,14 @@ void push(stack_t **list, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	number = atoi(global_token);
-
 	if (!isdigit(global_token[0]))
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		do_free(list);
 		exit(EXIT_FAILURE);
 	}
+
+	number = atoi(global_token);
 
 	new_node->n = number;
 	new_node->next = *list;
