@@ -9,6 +9,8 @@
  * Return: No return, void function
  */
 
+
+
 void push(stack_t **list, unsigned int line_number)
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
@@ -19,15 +21,10 @@ void push(stack_t **list, unsigned int line_number)
 		fprintf(stderr, "Error: malloc failed");
 		exit(EXIT_FAILURE);
 	}
+	
+	loop_letter(list, global_token, line_number);
 
 	number = atoi(global_token);
-
-	if (!isdigit(global_token[0]))
-	{
-		fprintf(stderr, "L%u: usage: push integer\n", line_number);
-		do_free(list);
-		exit(EXIT_FAILURE);
-	}
 
 	new_node->n = number;
 	new_node->next = *list;

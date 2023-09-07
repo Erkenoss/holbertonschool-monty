@@ -42,6 +42,7 @@ typedef struct instruction_s
 
 void do_free(stack_t **stack);
 void get_func(stack_t **stack, char *instruct, unsigned int line_nbr);
+void loop_letter(stack_t **list, char *global_token, unsigned int line_nbr);
 
 void push(stack_t **list, unsigned int line_nbr);
 void pall(stack_t **list, unsigned int line_nbr);

@@ -23,8 +23,8 @@ void get_func(stack_t **stack, char *instruct, unsigned int line_number)
 		{NULL, NULL}
 	};
 	char *number;
-	int iteration = 0;
 	char *token[100];
+	int iteration = 0;
 	int i = 0;
 
 	number = strtok(instruct, " \t");

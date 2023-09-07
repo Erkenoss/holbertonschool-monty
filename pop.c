@@ -21,8 +21,7 @@ void pop(stack_t **list, unsigned int line_number)
 
 	temp_pop = *list;
 	*list = (*list)->next;
-	if (*list != NULL)
-		(*list)->prev = NULL;
+	(*list)->prev = NULL;
 
 	free(temp_pop);
 }

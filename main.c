@@ -39,11 +39,11 @@ int main(int argc, char *argv[])
 			line[read - 1] = '\0';
 		}
 		line_nbr++;
-		instruct = strtok(line, "\n");
+		instruct = strtok(line, "\0\n");
 		while (instruct != NULL)
 		{
 			get_func(&list, instruct, line_nbr);
-			instruct = strtok(NULL, "\n");
+			instruct = strtok(NULL, "\0\n");
 		}
 	}
 	free(line);
