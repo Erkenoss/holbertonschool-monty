@@ -5,6 +5,8 @@
  * with push
  *
  * @global_token: argument for push
+ * @list: current stack
+ * @line_number: current line
  *
  * Return: no return, void function
  */
